@@ -39,11 +39,11 @@ pseudoNatural.prototype={
 					
 		if(this.elem!=undefined){
 			for(var i=0;i<this.elem.length;i++){
-				this.setUpElement(this.elem[i]);
+				this.addElement(this.elem[i]);
 			}
 		}
 	},
-	setUpElement:function(element){
+	addElement:function(element){
 		this.observer.observe(element, {attributes: true});
 		this.observer.elements.push(element);
 		if(element.type=="checkbox"){

@@ -5,7 +5,7 @@ This class allows the INPUT element types RADIO and CHECKBOX to behave more natu
 
 ## Dependence
 
-- none
+- **none**
 ---
 
 Install
@@ -19,6 +19,25 @@ Download the package with JavaScript file manually:
 
 Examples
 --------
+**simple use**
+
 ```javascript
-new pseudoNatural(document.getElementsByTagName("input"));
+//declare the elements that you want to transform
+var elements=document.getElementsByTagName("input");
+
+//create object from class and forward elements
+new pseudoNatural(elements);
+```
+
+**subsequent transformation of new elements**
+```javascript
+//declare the elements that you want to transform
+var elements=document.getElementsByTagName("input");
+
+//create object from class and forward elements
+var pointer=new pseudoNatural(elements);
+
+//add new element to class
+var element=document.getElementById("someID")
+pointer.addElement(element);
 ```
