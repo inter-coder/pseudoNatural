@@ -1,5 +1,5 @@
 var pseudoNatural=function(elem){
-	this.desc="opis";
+	this.desc="This class allows the INPUT element types RADIO and CHECKBOX to behave more naturally as inputs with type text";
 	this.elem=elem;
 	this.init();
 };
