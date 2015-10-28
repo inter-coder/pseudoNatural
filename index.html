@@ -9,9 +9,39 @@
 		<hr />
 		<label><input type="radio" name="Radio" />Radio1</label>
 		<label><input type="radio" name="Radio" />Radio2</label>
-		<label><input type="radio" name="Radio" />Radio3</label>		
+		<label><input type="radio" name="Radio" />Radio3</label>	
+		
+		<hr />
+		<br />
+		<b>Demonstration:</b>
+		<p>
+			<button onclick="ex1(1)">Set value 1 to CHECKBOX "Some label ONE"</button>
+			<button onclick="ex1(0)">Set value 0 to CHECKBOX "Some label ONE"</button>
+		</p>	
+		<p>
+			<button onclick="exR0()">Set value 1 to RADIO "Radio1"</button>
+			<button onclick="exR1()">Set value 1 to RADIO "Radio2"</button>
+			<button onclick="exR2()">Set value 1 to RADIO "Radio3"</button>
+			<button onclick="exRV()">GET value from RADIO group</button>
+		</p>
 		<script>
 			new pseudoNatural(document.getElementsByTagName("input"));
+			
+			function ex1(val){
+				document.getElementById("one").value=val;
+			}
+			function exR0(){
+				document.querySelectorAll("input[name='Radio']")[0].value=1;
+			}
+			function exR1(){
+				document.querySelectorAll("input[name='Radio']")[1].value=1;
+			}
+			function exR2(){
+				document.querySelectorAll("input[name='Radio']")[2].value=1;
+			}
+			function exRV(){
+				alert(document.querySelector("input[name='Radio']").nameValue());
+			}
 		</script>
 	</body>
 </html>

@@ -6,7 +6,6 @@ This class allows the INPUT element types RADIO and CHECKBOX to behave more natu
 ## Dependence
 
 - **none**
----
 
 Install
 --------
