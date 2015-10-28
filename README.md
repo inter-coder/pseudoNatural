@@ -2,6 +2,9 @@
 Set values to INPUTS types CHECKBOX and RADIO
 
 This class allows the INPUT element types RADIO and CHECKBOX to behave more naturally as inputs with type text
+>The values of the elements
+>>0 =false
+>>1 =true
 
 ## Dependence
 
@@ -37,6 +40,22 @@ var elements=document.getElementsByTagName("input");
 var pointer=new pseudoNatural(elements);
 
 //add new element to class
-var element=document.getElementById("someID")
+var element=document.getElementById("someID");
 pointer.addElement(element);
+```
+
+Usage
+-----
+- **Change value**
+```javascript
+//select element and change his value
+document.getElementById("someID").value=1;
+//and that's it, the script will be take care of the rest
+```
+
+- **Get value from radio group**
+```javascript
+//select element and change his value
+document.querySelector("input[name='SomeRadiosName']").nameValue();
+//and that's it, method returns the index of the selected element
 ```
